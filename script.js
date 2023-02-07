@@ -108,3 +108,27 @@ console.log(person["age"])
 
 console.log(person.hometown)
 console.log(person["hometown"])
+
+//--------------Opgave 2------------------------
+//- Lav en kopi af dit objekt fra opgave 1, og udvid det, så det indeholder både booleans, arrays og objekter. 
+let parent = {
+    firstname: "Holger",
+    lastname: "Find",
+    age: 36,
+    happy: true,
+    hometown: "Roskilde",
+    hobbies: ["literature", "photography", "gardening"],
+    children: [
+        {gender: "male", name: "Viggo"},
+        {gender: "female", name: "Louise"}
+    ]
+}
+//- Lav en løkke som udskriver værdierne af dit array i konsollen.
+parent.hobbies.forEach(function(hobby) {
+    console.log(hobby)
+  })
+//- udskriv værdierne fra det *nestede* objekt i konsollen.
+
+parent.children.forEach(function(element){
+    console.log(element.name)
+})
