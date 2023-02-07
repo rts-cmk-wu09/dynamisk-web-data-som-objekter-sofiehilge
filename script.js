@@ -147,7 +147,7 @@ parent.children.forEach(function(element){
 
 //et objekt med et array med et objekt, med et array---
 
-/* let parent2 = {
+let mother = {
     firstname: "Holger",
     lastname: "Find",
     age: 36,
@@ -155,13 +155,11 @@ parent.children.forEach(function(element){
     hometown: "Roskilde",
     hobbies: ["literature", "photography", "gardening"],
     children: [
-        {gender: "male", name: "Viggo", 
+        {gender: "male", name: "Viggo", interests:
         ["fodbold", "dans", "tegne"]},
         {gender: "female", name: "Louise"}
     ]
-} */
+}
 
-parent2.children.forEach(function(element){
-   
-    console.log(element.name)
-})
+console.log(mother.children[0].interests[2])
+
