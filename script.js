@@ -130,5 +130,38 @@ parent.hobbies.forEach(function(hobby) {
 //- udskriv værdierne fra det *nestede* objekt i konsollen.
 
 parent.children.forEach(function(element){
+   
+    console.log(element.name)
+})
+
+//-udskriv elementerne i html'en
+
+parent.children.forEach(function(element){
+   
+    document.getElementById("demo").innerHTML = `${element.name}`
+   
+})
+
+// `` <-- template literal is a new kind of string literal that can span multiple line and expressions.
+//${} is a placeholder with anything within the curly brackets treated as JavaScript and anything outside the brackets treated as a string
+
+//et objekt med et array med et objekt, med et array---
+
+/* let parent2 = {
+    firstname: "Holger",
+    lastname: "Find",
+    age: 36,
+    happy: true,
+    hometown: "Roskilde",
+    hobbies: ["literature", "photography", "gardening"],
+    children: [
+        {gender: "male", name: "Viggo", 
+        ["fodbold", "dans", "tegne"]},
+        {gender: "female", name: "Louise"}
+    ]
+} */
+
+parent2.children.forEach(function(element){
+   
     console.log(element.name)
 })
