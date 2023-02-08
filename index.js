@@ -19,9 +19,13 @@ ${ministre.partiforhold.moderaterne.oprettet}
 </address>
 `
 
+//-----------------opret element i body med javascript
+let body = document.querySelector("body")
+let socialdemokratiMinistre = document.createElement("ul");
+ministre.partiforhold.socialdemokratiet.medlemmer.kvinde.forEach((element) => {
+    socialdemokratiMinistre.innerHTML += `<li>${element}</li>`;
+})
 
-// i html eg. footer>(data herind)<footer>
-//index.js: 
-// let footer = document.querySelector("footer")
-// footer.innerHTML = `<adress>${minister.partiforhold.moderaterne.}
-// dette er en anden måde at sætte dynamisk javascript data ind i htmlen, dog har den nogle begrænsninger i forhold til eventloop.
+body.append(socialdemokratiMinistre);
+
+// kan kun vise strings i arrayet, men ikke objekterne i arrayet.

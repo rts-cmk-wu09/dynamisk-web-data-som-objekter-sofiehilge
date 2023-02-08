@@ -35,13 +35,11 @@
 // -----------hvordan opretter man et element inde i bodyen via javascript.
 //index.js:
 //let liste = document.createElement("ul"); <-- eksiterer ikke i domen a det fortsat blot er en reference
-// let body = document.queryselector("body");
 // men appender det til DOM'en, det betyder at tilføje
 // minister.partiforhold.forEach((element) =>{
 //liste.innerHTML += `<li>${element}</li>`;
 //})
-//})
-// liste.innerHTML += `<li>${minister.mand[1]}</li>`;
+
 //body.append(liste);
 
 let ministre = {
@@ -60,7 +58,7 @@ let ministre = {
                             { name: "Kaare Dybvad Bek", ministerpost: "Udlændinge- og integrationsminister", age: 39, married: undefined, kids: undefined, birthdate: "05.08.1984", education:"Cand.scient"},
                             { name: "Jeppe Bruus Christensen", ministerpost: "Skatteminister", age: 45, married: true, kids: ["pige", "pige"], birthdate: "20.04.1978", education: "Cand.scient.pol"},
                             ],
-                    kvinde: [{ name: "Mette Frederiksen", ministerpost: "Statsminister", age: 46, married: true, kids: ["dreng", "pige"], birthdate: "19.11.1977", education: "Ma i Afrikastudier" },
+                    kvinde: ["mette", "tine", "pernille",{ name: "Mette Frederiksen", ministerpost: "Statsminister", age: 46, married: true, kids: ["dreng", "pige"], birthdate: "19.11.1977", education: "Ma i Afrikastudier" },
                             { name: "Pernille Rosenkrantz-Theil", ministerpost: "Social- og boligminister", age: 46, married: undefined, kids: undefined, birthdate: "17.01.1977", education: "Ba Statskundskab" },
                             { name: "Ane Halsboe-Jørgensen", ministerpost: "beskæftigelsesminister", age: 40, married: undefined, kids: undefined, birthdate: "04.05.1983", education: "Cand.scient.pol" }
                             ],
