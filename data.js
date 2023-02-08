@@ -68,8 +68,8 @@ let ministre = {
                 },
         moderaterne:
         {
-            Partinavn: "Moderaterne",
-            Oprettet: 2022,
+            partinavn: "Moderaterne",
+            oprettet: 2022,
             medlemmer: {
                     Mand: [{ name: "Lars Løkke Rasmussen", ministerpost: "Udenrigsminister", age: 59, married: true, kids: undefined, birthdate: "15.05.1964", education: "Cand.jur" }, // Null indicates the absence of a value for a variable. Undefined indicates the absence of the variable itself.
                             { name: "Jakob Engel-Schmidt", ministerpost: "moderakulturminister", age: 37, married: undefined, kids: undefined, birthdate: "24.oktober.1983", education: "Cand.merc" },
