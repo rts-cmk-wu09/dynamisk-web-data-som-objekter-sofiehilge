@@ -30,7 +30,7 @@ divSocMale.append(socMaleList);
 document.querySelector("body").innerHTML += `
 <section>
                 <h5 class="red">Kvindelige</5>
-                    <div class="red"id=socFemaleList></div>
+                    <div class="red" id=socFemaleList></div>
 </section>`;
 
 let divSocFemale = document.querySelector("#socFemaleList");
@@ -100,11 +100,13 @@ divVenMale.append(venMaleList);
 document.querySelector("body").innerHTML += `
 <section>
                 <h5 class="red">Kvindelige</5>
-                    <div class="red" id=venFemaleList></div>
+                    <div class=red id=venFemaleList></div>
 </section>`;
 
 let divVenFemale = document.querySelector("#venFemaleList");
 let venFemaleList = document.createElement("ul");
+
+
 ministre.partiforhold.moderaterne.medlemmer.kvinde.forEach((kvinde) =>{
     venFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
 });
@@ -112,11 +114,21 @@ ministre.partiforhold.moderaterne.medlemmer.kvinde.forEach((kvinde) =>{
 divVenFemale.append(venFemaleList); //<---- udskriver listen på DOMen
 
 
+
 ///////////STYLLING
 
-document.querySelector("h2").style.color = "darkgrey";
-document.querySelector("h3").style.color = "red";
-document.querySelector("#")
+//styling
+venFemaleList.classList.add("rednu")
+
+socFemaleList.classList.add("rednu")
+
+modFemaleList.classList.add("rednu")
+
+
+document.querySelector(".red").style.color = "red";
+document.querySelector(".blue").style.color = "blue";
+document.querySelector(".darkblue").style.color = "darkblue";
+document.querySelector(".lilla").style.color = "lilla";
 
 //---------VIS socialdemokratiet og årstal i heading
 /* let heading = document.querySelector(".heading"); */
