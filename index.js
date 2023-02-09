@@ -1,12 +1,14 @@
 //DOM - Document object model: document står for html, object er de enkelte elementer i HTMLen: heading, header, article, footer etc., model: strukturen vi har sat tingene op efter
+//-------------indsæt header element og overskrift med Java Script-----
+
+document.querySelector('body').innerHTML = `<header><h1>Ministre i regeringen 2023</h1></header>`
+document.querySelector('h1').style.color = "gold";
 
 //---------VIS socialdemokratiet og årstal i heading
 let heading = document.querySelector(".heading");
 
 heading.textContent =
-  ministre.partiforhold.socialdemokratiet.partinavn +
-  " " +
-  ministre.partiforhold.socialdemokratiet.oprettet;
+  ministre.partiforhold.socialdemokratiet.partinavn + " " +  ministre.partiforhold.socialdemokratiet.oprettet;
 
 //----------vis venstre og årstal i paragraf med template litterals.
 let para = document.querySelector(".p");
@@ -40,3 +42,9 @@ document.querySelector(".socialdemokratiet").innerHTML = `
 <section>
 <p>Navn: ${ministre.partiforhold.socialdemokratiet.medlemmer.kvinde[0].name}</p>
 `;
+
+
+//-----------------------------------Styling i javascript:
+
+document.querySelector(".socialdemokratiet").style.color = "red";
+
