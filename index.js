@@ -15,43 +15,48 @@ document.querySelector("body").innerHTML += `
             <h4>ministre</4>
                 <h5>mandlige</5>
                     <div id=socMaleList></div>
-<h3>Moderaterne</h3>
-<h3>Venstre</h3>
 </section>`;
 //--tilføj liste med mandlige socialdemokrat ministre
-let divSocMale = document.querySelector("#socMaleList")
+let divSocMale = document.querySelector("#socMaleList");
 let socMaleList = document.createElement("ul");
 ministre.partiforhold.socialdemokratiet.medlemmer.mand.forEach((mand) => {
-    socMaleList.innerHTML += `<li>${mand.name}</li>`;
-  });
+  socMaleList.innerHTML += `<li>${mand.name}</li>`;
+});
 
-  divSocMale.append(socMaleList);
+divSocMale.append(socMaleList);
 
-  //tilføj liste med kvindelige socialdemokrat ministre
-  
+//tilføj liste med kvindelige socialdemokrat ministre
+
+document.querySelector("body").innerHTML += `
+<section>
+                <h5>kvindelige</5>
+                    <div id=socFemaleList></div>
+</section>`;
+
+let divSocFemale = document.querySelector("#socFemaleList");
+let socFemaleList = document.createElement("ul");
+ministre.partiforhold.socialdemokratiet.medlemmer.kvinde.forEach((kvinde) =>{
+    socFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
+});
+
+divSocFemale.append(socFemaleList); //<---- udskriver listen på DOMen
 
 
 
-
-
-
-  ///////////STYLLING
-
+///////////STYLLING
 
 document.querySelector("h2").style.color = "darkgrey";
-document.querySelector("h3").style.color = "red"
-
-
+document.querySelector("h3").style.color = "red";
 
 //---------VIS socialdemokratiet og årstal i heading
-let heading = document.querySelector(".heading");
+/* let heading = document.querySelector(".heading"); */
 
 /* heading.textContent = ministre.partiforhold.socialdemokratiet.partinavn +
   " " +
   ministre.partiforhold.socialdemokratiet.oprettet;
  */
 //----------vis venstre og årstal i paragraf med template litterals.
-let para = document.querySelector(".p");
+/* let para = document.querySelector(".p"); */
 
 /* para.textContent = `
 ${ministre.partiforhold.venstre.Partinavn}
@@ -67,13 +72,13 @@ ${ministre.partiforhold.moderaterne.oprettet}
 `;
  */
 //-----------------opret element i body med javascript
-let body = document.querySelector("body");
+/* let body = document.querySelector("body");
 let socialdemokratiMinistre = document.createElement("ul");
 ministre.partiforhold.socialdemokratiet.medlemmer.kvinde.forEach((kvinde) => {
   socialdemokratiMinistre.innerHTML += `<li>${kvinde.name}</li>`;
 });
 
-body.append(socialdemokratiMinistre);
+body.append(socialdemokratiMinistre); */
 
 // kan kun vise strings i arrayet, men ikke objekterne i arrayet.
 
