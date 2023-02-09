@@ -159,7 +159,7 @@ let ministre = {
       partinavn: "Moderaterne",
       oprettet: 2022,
       medlemmer: {
-        Mand: [
+        mand: [
           {
             name: "Lars Løkke Rasmussen",
             ministerpost: "Udenrigsminister",
@@ -179,7 +179,7 @@ let ministre = {
             education: "Cand.merc",
           },
           {
-            name: "LArs Aagaard",
+            name: "Lars Aagaard",
             ministerpost: "Klima-, energi- og forsyningsminister",
             age: undefined,
             married: undefined,
@@ -188,7 +188,7 @@ let ministre = {
             education: undefined,
           },
         ],
-        Kvinde: [
+        kvinde: [
           {
             name: "Christina Egelund",
             ministerpost: "Uddannelses- og forskningsminister",
@@ -211,10 +211,10 @@ let ministre = {
       },
     },
     venstre: {
-      Partinavn: "Venstre",
+      partinavn: "Venstre",
       Oprettet: 1870,
       medlemmer: {
-        Mand: [
+        mand: [
           {
             name: "Jakob Elleman-Jensen",
             ministerpost: "Forsvarsminister",
@@ -252,7 +252,7 @@ let ministre = {
             education: "Bankrådgiver",
           },
         ],
-        Kvinde: [
+        kvinde: [
           {
             name: "Sophie Løhde",
             ministerpost: "Indenrigs- og sundhedsminister",
