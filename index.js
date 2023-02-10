@@ -2,19 +2,21 @@
 //-------------indsæt header element og overskrift med Java Script-----
 
 document.querySelector(
-  "body"
-).innerHTML = `<header><h1>Ministre i regeringen 2023</h1></header>`;
+  "header"
+).innerHTML = `<h1>Ministre i regeringen 2023</h1>
+<h2>Partier</h2>`;
 document.querySelector("h1").style.color = "gold";
 
 //------opret section med header for Socialdemokratiet----
 
-document.querySelector("body").innerHTML += `
-<section>
-    <h2>Partier</h2>
+document.querySelector("main").innerHTML += `
+<section class="social">
         <h3 class="red">${ministre.partiforhold.socialdemokratiet.partinavn}</h3>
             <h4 class="red">Ministre</4>
                 <h5 class="blue">Mandlige</5>
                     <div class="blue" id=socMaleList></div>
+                    <h5 class="red">Kvindelige</5>
+                    <div class="red" id=socFemaleList></div>
 </section>`;
 //--tilføj liste med mandlige socialdemokrat ministre
 let divSocMale = document.querySelector("#socMaleList");
@@ -27,29 +29,24 @@ divSocMale.append(socMaleList);
 
 //tilføj liste med kvindelige socialdemokrat ministre
 
-document.querySelector("body").innerHTML += `
-<section>
-                <h5 class="red">Kvindelige</5>
-                    <div class="red" id=socFemaleList></div>
-</section>`;
-
 let divSocFemale = document.querySelector("#socFemaleList");
 let socFemaleList = document.createElement("ul");
-ministre.partiforhold.socialdemokratiet.medlemmer.kvinde.forEach((kvinde) =>{
-    socFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
+ministre.partiforhold.socialdemokratiet.medlemmer.kvinde.forEach((kvinde) => {
+  socFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
 });
 
 divSocFemale.append(socFemaleList); //<---- udskriver listen på DOMen
 
-
 //------opret section med header for moderaterne----
 
-document.querySelector("body").innerHTML += `
-<section>
+document.querySelector("main").innerHTML += `
+<section class="moderat">
         <h3 class="lilla">${ministre.partiforhold.moderaterne.partinavn}</h3>
             <h4 class="lilla">Ministre</4>
-                <h5 class"blue">Mandlige</5>
+                <h5 class="blue">Mandlige</5>
                     <div class="blue" id=modMaleList></div>
+                    <h5 class="red" >Kvindelige</5>
+                    <div class="red" id=modFemaleList></div>
 </section>`;
 //--tilføj liste med mandlige moderat ministre
 let divModMale = document.querySelector("#modMaleList");
@@ -62,28 +59,24 @@ divModMale.append(modMaleList);
 
 //------tilføj liste med kvindlige moderat ministre
 
-document.querySelector("body").innerHTML += `
-<section>
-                <h5 class="red" >Kvindelige</5>
-                    <div class="red" id=modFemaleList></div>
-</section>`;
-
 let divModFemale = document.querySelector("#modFemaleList");
 let modFemaleList = document.createElement("ul");
-ministre.partiforhold.moderaterne.medlemmer.kvinde.forEach((kvinde) =>{
-    modFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
+ministre.partiforhold.moderaterne.medlemmer.kvinde.forEach((kvinde) => {
+  modFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
 });
 
 divModFemale.append(modFemaleList); //<---- udskriver listen på DOMen
 
 //------opret section med header for Venstre----
 
-document.querySelector("body").innerHTML += `
-<section>
+document.querySelector("main").innerHTML += `
+<section class="venstre">
         <h3 class="darkblue">${ministre.partiforhold.venstre.partinavn}</h3>
             <h4 class="darkblue">Ministre</4>
                 <h5 class="blue">Mandlige</5>
                     <div class="blue" id=venMaleList></div>
+                    <h5 class="red">Kvindelige</5>
+                    <div class=red id=venFemaleList></div>
 </section>`;
 //--tilføj liste med mandlige venstre ministre
 let divVenMale = document.querySelector("#venMaleList");
@@ -94,36 +87,19 @@ ministre.partiforhold.venstre.medlemmer.mand.forEach((mand) => {
 
 divVenMale.append(venMaleList);
 
-
 //---tilføj liste med kvindelige venstre ministre
 
-document.querySelector("body").innerHTML += `
-<section>
-                <h5 class="red">Kvindelige</5>
-                    <div class=red id=venFemaleList></div>
-</section>`;
 
 let divVenFemale = document.querySelector("#venFemaleList");
 let venFemaleList = document.createElement("ul");
 
-
-ministre.partiforhold.moderaterne.medlemmer.kvinde.forEach((kvinde) =>{
-    venFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
+ministre.partiforhold.moderaterne.medlemmer.kvinde.forEach((kvinde) => {
+  venFemaleList.innerHTML += `<li>${kvinde.name}</li>`;
 });
 
 divVenFemale.append(venFemaleList); //<---- udskriver listen på DOMen
 
-
-
-///////////STYLLING
-
-//styling
-venFemaleList.classList.add("rednu")
-
-socFemaleList.classList.add("rednu")
-
-modFemaleList.classList.add("rednu")
-
+/////////////////////////////////////STYLLING/////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.querySelector(".red").style.color = "red";
 document.querySelector(".blue").style.color = "blue";

@@ -1,8 +1,53 @@
 body{
     background-color: lightgoldenrodyellow;
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.rednu{
-    color: red
+header{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.darkblue{
+    color: darkblue;
+}
+
+.lilla{
+    color: purple;
+}
+
+.social{
+    background-color: lightcoral;
+    width: 300px;
+    text-align: center;
+}
+
+.venstre{
+    background-color: lightskyblue;
+    width: 300px;
+    text-align: center;
+}
+
+.moderat{
+    background-color: lavender;
+    width: 300px;
+    text-align: center;
+}
+
+li{
+    list-style: none;
 }
